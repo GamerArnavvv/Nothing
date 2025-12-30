@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>For Dwizz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -18,88 +17,98 @@
       flex-direction: column;
       padding: 20px;
     }
+
     .card {
       background: rgba(0,0,0,0.45);
       padding: 32px;
       border-radius: 18px;
       max-width: 380px;
       box-shadow: 0 12px 35px rgba(0,0,0,0.6);
-      margin-bottom: 20px;
     }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.7;
-      opacity: 0.92;
-    }
+
     .end {
       margin-top: 18px;
       font-size: 15px;
       opacity: 0.85;
     }
+
     .sign {
       margin-top: 14px;
       font-size: 14px;
       opacity: 0.75;
     }
+
     iframe {
       border-radius: 12px;
       margin-top: 15px;
       width: 100%;
       max-width: 380px;
-      height: 80px;
+      height: 180px;
+      display: none; /* hide by default */
+    }
+
+    /* Fixed button on top-left */
+    #musicButton {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 20px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff4757;
+      color: white;
+      cursor: pointer;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
 
+  <button id="musicButton" onclick="playMusic()">🔊</button>
+
   <div class="card">
     <h1>Dwizz 🖤</h1>
 
-    <p>
-      I miss our moments together.<br>
-      The random talks, the laughs,<br>
-      and the memories that still feel close.
-    </p>
+    <p>I miss our moments together.<br>
+    The random talks, the laughs,<br>
+    and the memories that still feel close.</p>
 
-    <p>
-      I’ll miss everyone in my own way,<br>
-      but you’re the one I’ll miss the most<br>
-      when I go to start my life again<br>
-      in North Guwahati.
-    </p>
+    <p>I’ll miss everyone in my own way,<br>
+    but you’re the one I’ll miss the most<br>
+    when I go to start my life again<br>
+    in North Guwahati.</p>
 
-    <p>
-      Thank you for forgiving me every time,<br>
-      and sorry for the mistakes I made along the way.
-    </p>
+    <p>Thank you for forgiving me every time,<br>
+    and sorry for the mistakes I made along the way.</p>
 
-    <p>
-      I’ll be here only for a few more days,<br>
-      so before I quietly disappear<br>
-      from everyone’s heart,<br>
-      make me feel a little special.
-    </p>
+    <p>I’ll be here only for a few more days,<br>
+    so before I quietly disappear<br>
+    from everyone’s heart,<br>
+    make me feel a little special.</p>
 
     <div class="end">
       And just saying…<br>
-      I’m still your favorite person 😌
+      I’m still your favorite person 😝
     </div>
 
-    <div class="sign">
-      — Arv
-    </div>
+    <div class="sign">— Arv</div>
+
+    <iframe id="yt"
+      src="https://www.youtube.com/embed/CBEvfZu4HE4?loop=1&playlist=CBEvfZu4HE4"
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
   </div>
 
-  <!-- YouTube Embed -->
-  <iframe src="https://www.youtube.com/embed/CBEvfZu4HE4?autoplay=1&loop=1&playlist=CBEvfZu4HE4" 
-          title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-  </iframe>
+  <script>
+    function playMusic() {
+      const player = document.getElementById("yt");
+      player.style.display = "block"; // show iframe
+      player.src += "&autoplay=1"; // start music
+    }
+  </script>
 
 </body>
 </html>
