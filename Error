@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>For Dwizz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      flex-direction: column;
-      padding: 20px;
-    }
-    .card {
-      background: rgba(0,0,0,0.45);
-      padding: 32px;
-      border-radius: 18px;
-      max-width: 380px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.6);
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.7;
+<: 1.7;
       opacity: 0.92;
     }
     .end {
@@ -53,7 +19,7 @@
       height: 80px;
     }
   </style>
-</head>
+</head
 <body>
 
   <div class="card">
